@@ -10,3 +10,11 @@ body {
   color: white;
   font-family: Inter, sans-serif;
 }
+
+section {
+  scroll-margin-top: 88px;
+}
+
+::selection {
+  background: rgba(96, 165, 250, 0.35);
+}

@@ -1,0 +1,77 @@
+import { useEffect, useState } from "react";
+
+const navItems = [
+  { label: "Home", href: "#home", id: "home" },
+  { label: "About", href: "#about", id: "about" },
+  { label: "Projects", href: "#projects", id: "projects" },
+  { label: "Skills", href: "#skills", id: "skills" },
+  { label: "Certificates", href: "#certificates", id: "certificates" },
+  { label: "Contact", href: "#contact", id: "contact" },
+];
+
+function Navbar() {
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const sections = navItems
+      .map((item) => document.getElementById(item.id))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries.find((entry) => entry.isIntersecting);
+
+        if (visibleEntry) {
+          setActiveSection(visibleEntry.target.id);
+        }
+      },
+      {
+        rootMargin: "-35% 0px -55% 0px",
+        threshold: 0,
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#050816]/80 backdrop-blur-xl">
+      <nav
+        aria-label="Main navigation"
+        className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 text-white sm:px-6"
+      >
+        <a href="#home" className="shrink-0 text-lg font-bold tracking-wide">
+          Gonca<span className="text-blue-400">.</span>
+        </a>
+
+        <div className="flex min-w-0 gap-1 overflow-x-auto rounded-full border border-white/10 bg-white/5 p-1 text-sm">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className={`whitespace-nowrap rounded-full px-4 py-2 transition ${
+                activeSection === item.id
+                  ? "bg-blue-500 text-white shadow-[0_0_24px_rgba(59,130,246,0.35)]"
+                  : "text-gray-300 hover:bg-white/10 hover:text-white"
+              }`}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+
+        <a
+          href="/GONCA_YAVUZ_Junior_Software_Developer.pdf"
+          download
+          className="hidden shrink-0 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 transition hover:bg-blue-500 hover:text-white md:inline-flex"
+        >
+          Download CV
+        </a>
+      </nav>
+    </header>
+  );
+}
+
+export default Navbar;
