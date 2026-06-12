@@ -61,14 +61,6 @@ function Navbar() {
             </a>
           ))}
         </div>
-
-        <a
-          href="/GONCA_YAVUZ_Junior_Software_Developer.pdf"
-          download
-          className="hidden shrink-0 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 transition hover:bg-blue-500 hover:text-white md:inline-flex"
-        >
-          Download CV
-        </a>
       </nav>
     </header>
   );

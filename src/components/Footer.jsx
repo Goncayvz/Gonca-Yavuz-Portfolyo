@@ -19,7 +19,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub profile"
-            className="text-gray-300 transition hover:text-blue-400"
+            className="text-gray-300 no-underline transition hover:text-blue-400"
           >
             <FaGithub />
           </a>
@@ -28,14 +28,14 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn profile"
-            className="text-gray-300 transition hover:text-blue-400"
+            className="text-gray-300 no-underline transition hover:text-blue-400"
           >
             <FaLinkedin />
           </a>
           <a
             href="mailto:goncayvz1903@gmail.com"
             aria-label="Send email"
-            className="text-gray-300 transition hover:text-blue-400"
+            className="text-gray-300 no-underline transition hover:text-blue-400"
           >
             <FaEnvelope />
           </a>

@@ -76,7 +76,7 @@ function Contact() {
                 href={link.href}
                 target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                 rel={link.href.startsWith("mailto:") ? undefined : "noreferrer"}
-                className="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-blue-400/40"
+                className="group rounded-3xl border border-white/10 bg-white/5 p-6 no-underline backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_18px_50px_rgba(59,130,246,0.14)]"
               >
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/10 text-2xl text-blue-400">
                   <Icon />
