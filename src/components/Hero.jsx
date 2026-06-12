@@ -62,6 +62,7 @@ function Hero() {
         aria-hidden="true"
         className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,#22d3ee2b,transparent_30%),radial-gradient(circle_at_82%_28%,#fb718522,transparent_28%),radial-gradient(circle_at_55%_85%,#10b9811f,transparent_30%),linear-gradient(180deg,#020617_0%,#071427_55%,#050816_100%)]"
       ></div>
+      <div className="star-field" aria-hidden="true"></div>
       <motion.div
         aria-hidden="true"
         animate={{ rotate: 360 }}

@@ -11,13 +11,16 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-[#050816]">
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Certificates />
-        <Contact />
+      <main className="relative min-h-screen overflow-hidden bg-[#050816]">
+        <div className="star-field site-stars" aria-hidden="true"></div>
+        <div className="relative z-10">
+          <Hero />
+          <About />
+          <Projects />
+          <Skills />
+          <Certificates />
+          <Contact />
+        </div>
       </main>
       <Footer />
     </>

@@ -11,6 +11,82 @@ body {
   font-family: Inter, sans-serif;
 }
 
+.star-field {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(34, 211, 238, 0.18), transparent 26%),
+    radial-gradient(circle at 86% 32%, rgba(251, 113, 133, 0.13), transparent 24%),
+    radial-gradient(circle at 52% 76%, rgba(16, 185, 129, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(2, 6, 23, 0.94) 0%, rgba(7, 20, 39, 0.82) 45%, rgba(5, 8, 22, 0.96) 100%);
+}
+
+.star-field::before,
+.star-field::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  will-change: opacity, transform;
+}
+
+.star-field::before {
+  opacity: 0.62;
+  background-image:
+    radial-gradient(circle at 6% 14%, rgba(255, 255, 255, 0.95) 0 1.2px, transparent 2.4px),
+    radial-gradient(circle at 18% 36%, rgba(191, 219, 254, 0.74) 0 1px, transparent 2.2px),
+    radial-gradient(circle at 29% 8%, rgba(255, 255, 255, 0.82) 0 1px, transparent 2.2px),
+    radial-gradient(circle at 41% 27%, rgba(125, 211, 252, 0.62) 0 1px, transparent 2.3px),
+    radial-gradient(circle at 57% 15%, rgba(255, 255, 255, 0.9) 0 1.1px, transparent 2.4px),
+    radial-gradient(circle at 72% 43%, rgba(191, 219, 254, 0.7) 0 1px, transparent 2.2px),
+    radial-gradient(circle at 87% 25%, rgba(255, 255, 255, 0.84) 0 1px, transparent 2.2px),
+    radial-gradient(circle at 11% 67%, rgba(125, 211, 252, 0.56) 0 1px, transparent 2.3px),
+    radial-gradient(circle at 26% 84%, rgba(255, 255, 255, 0.8) 0 1px, transparent 2.2px),
+    radial-gradient(circle at 48% 70%, rgba(191, 219, 254, 0.66) 0 1px, transparent 2.2px),
+    radial-gradient(circle at 65% 91%, rgba(255, 255, 255, 0.86) 0 1.1px, transparent 2.4px),
+    radial-gradient(circle at 92% 77%, rgba(125, 211, 252, 0.56) 0 1px, transparent 2.3px),
+    radial-gradient(circle at 34% 52%, rgba(255, 255, 255, 0.76) 0 0.9px, transparent 2.1px),
+    radial-gradient(circle at 78% 61%, rgba(255, 255, 255, 0.7) 0 0.9px, transparent 2.1px);
+  filter: drop-shadow(0 0 5px rgba(147, 197, 253, 0.58));
+  animation: stars-twinkle 6s ease-in-out infinite;
+}
+
+.star-field::after {
+  opacity: 0.38;
+  background-image:
+    radial-gradient(circle at 9% 51%, rgba(255, 255, 255, 0.78) 0 1.4px, transparent 2.9px),
+    radial-gradient(circle at 23% 21%, rgba(96, 165, 250, 0.58) 0 1.2px, transparent 2.6px),
+    radial-gradient(circle at 39% 57%, rgba(255, 255, 255, 0.66) 0 1px, transparent 2.3px),
+    radial-gradient(circle at 53% 34%, rgba(191, 219, 254, 0.5) 0 1.2px, transparent 2.7px),
+    radial-gradient(circle at 68% 64%, rgba(255, 255, 255, 0.72) 0 1.1px, transparent 2.5px),
+    radial-gradient(circle at 80% 10%, rgba(96, 165, 250, 0.5) 0 1.1px, transparent 2.6px),
+    radial-gradient(circle at 95% 49%, rgba(255, 255, 255, 0.68) 0 1px, transparent 2.3px),
+    radial-gradient(circle at 36% 93%, rgba(191, 219, 254, 0.48) 0 1.1px, transparent 2.6px),
+    radial-gradient(circle at 83% 88%, rgba(255, 255, 255, 0.66) 0 1px, transparent 2.3px),
+    radial-gradient(circle at 61% 6%, rgba(255, 255, 255, 0.58) 0 0.9px, transparent 2.2px);
+  filter: drop-shadow(0 0 7px rgba(96, 165, 250, 0.5));
+  animation: stars-twinkle 8s ease-in-out infinite reverse;
+}
+
+.site-stars {
+  position: fixed;
+  z-index: 0;
+}
+
+@keyframes stars-twinkle {
+  0%,
+  100% {
+    opacity: 0.42;
+  }
+
+  50% {
+    opacity: 0.78;
+  }
+}
+
 section {
   scroll-margin-top: 88px;
 }
