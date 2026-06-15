@@ -42,7 +42,8 @@ function Footer() {
         </div>
 
         <p className="text-sm text-slate-300">
-          &copy; 2026. All rights reserved.
+          Designed and developed by{" "}
+          <span className="font-semibold text-blue-300">Gonca Yavuz</span>.
         </p>
       </div>
     </footer>

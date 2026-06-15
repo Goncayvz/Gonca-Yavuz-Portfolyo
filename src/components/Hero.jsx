@@ -56,7 +56,7 @@ function Hero() {
       id="home"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative flex min-h-screen items-center overflow-hidden bg-[#050816] px-4 pb-14 pt-24 text-white sm:px-6 sm:pb-16 sm:pt-28"
+      className="relative flex min-h-screen items-center overflow-hidden bg-[#050816] px-4 pb-12 pt-24 text-white sm:px-6 sm:pb-14 sm:pt-28"
     >
       <div
         aria-hidden="true"
@@ -104,29 +104,29 @@ function Hero() {
         className="absolute bottom-12 right-0 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl"
       ></motion.div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:gap-10">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center lg:text-left"
         >
-          <div className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 sm:mb-6">
+          <div className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200">
             <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_16px_rgba(52,211,153,0.85)]"></span>
-            Frontend Developer fırsatlarına açık
+            Frontend Developer olarak yeni fırsatlara açık
           </div>
 
-          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:mx-0 lg:text-7xl">
-            Merhaba, ben Gonca Yavuz.
+          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:mx-0 lg:text-6xl xl:text-7xl">
+            Merhaba, ben Gonca.
             <span className="block bg-gradient-to-r from-blue-300 via-cyan-200 to-blue-400 bg-clip-text text-transparent">
-              React ile sade, hızlı ve kullanıcı odaklı arayüzler geliştiriyorum.
+              Modern ve responsive web arayüzleri geliştiriyorum.
             </span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-300 sm:mt-6 sm:text-lg sm:leading-8 lg:mx-0">
-            Bilgisayar Programcılığı mezunu, frontend odaklı bir geliştiriciyim.
-            React, JavaScript, Tailwind CSS ve REST API yapılarıyla gerçek
-            ihtiyaçlara dokunan, responsive ve temiz web uygulamaları üretiyorum.
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-300 sm:text-lg sm:leading-8 lg:mx-0">
+            React, JavaScript ve Tailwind CSS ile temiz, hızlı ve kullanıcı
+            dostu arayüzler oluşturuyorum. API entegrasyonları ve responsive
+            tasarım pratikleriyle gerçek projeler geliştirmeye odaklanıyorum.
           </p>
 
           <div className="mt-7 flex flex-wrap justify-center gap-3 lg:justify-start">
@@ -140,17 +140,17 @@ function Hero() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:mt-9 sm:flex-row lg:justify-start">
+          <div className="mt-7 flex flex-col justify-center gap-3 sm:mt-8 sm:flex-row lg:justify-start">
             <a
               href="#projects"
-              className="inline-flex justify-center rounded-full bg-blue-500 px-7 py-3 font-semibold text-white shadow-[0_16px_40px_rgba(37,99,235,0.28)] transition hover:-translate-y-0.5 hover:bg-blue-400"
+              className="inline-flex justify-center rounded-full bg-blue-500 px-6 py-3 font-semibold text-white shadow-[0_16px_40px_rgba(37,99,235,0.28)] transition hover:-translate-y-0.5 hover:bg-blue-400 md:px-7"
             >
               Projelerimi Gör
             </a>
 
             <a
               href="#contact"
-              className="inline-flex justify-center rounded-full border border-white/15 bg-white/5 px-7 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-blue-400/50 hover:bg-white/10"
+              className="inline-flex justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-blue-400/50 hover:bg-white/10 md:px-7"
             >
               İletişime Geç
             </a>
@@ -205,7 +205,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.1 }}
-          className="relative mx-auto w-full max-w-[560px]"
+          className="relative mx-auto w-full max-w-[500px] xl:max-w-[540px]"
         >
           <motion.div
             aria-hidden="true"

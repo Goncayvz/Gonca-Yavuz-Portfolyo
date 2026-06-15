@@ -69,31 +69,31 @@ function Skills() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
-      className="max-w-7xl mx-auto px-6 py-24 md:py-32 text-white"
+      className="mx-auto max-w-7xl px-6 py-16 text-white md:py-24"
     >
-      <h2 className="text-5xl md:text-6xl font-bold mb-16">
+      <h2 className="mb-10 text-3xl font-bold sm:text-4xl md:mb-12 md:text-5xl">
         My <span className="text-blue-400">Skills</span>
       </h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {skillGroups.map((group) => (
           <div
             key={group.title}
-            className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-blue-400/30"
+            className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-blue-400/30 md:p-7"
           >
             <h3
-              className={`text-2xl font-bold mb-6 ${
+              className={`mb-5 text-xl font-bold md:text-2xl ${
                 colorClasses[group.color].split(" ")[0]
               }`}
             >
               {group.title}
             </h3>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2.5 md:gap-3">
               {group.skills.map((skill) => (
                 <span
                   key={skill}
-                  className={`px-4 py-2 rounded-full border text-sm ${colorClasses[group.color]}`}
+                  className={`rounded-full border px-3 py-2 text-sm md:px-4 ${colorClasses[group.color]}`}
                 >
                   {skill}
                 </span>

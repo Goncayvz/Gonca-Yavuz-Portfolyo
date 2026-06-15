@@ -96,14 +96,14 @@ function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.6 }}
-      className="mx-auto max-w-7xl px-6 py-24 text-white md:py-32"
+      className="mx-auto max-w-7xl px-6 py-16 text-white md:py-24"
     >
-      <div className="mb-10 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
+      <div className="mb-10 flex flex-col gap-5 md:mb-12 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">
             Portfolio
           </p>
-          <h2 className="text-4xl font-bold md:text-5xl">
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
             Featured <span className="text-blue-400">Projects</span>
           </h2>
         </div>
@@ -126,7 +126,7 @@ function Projects() {
         </div>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
         {visibleProjects.map((project) => (
           <a
             key={project.title}
@@ -134,18 +134,18 @@ function Projects() {
             target="_blank"
             rel="noreferrer"
             className={`group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-blue-400/40 ${
-              project.featured ? "lg:min-h-[520px]" : ""
+              project.featured ? "lg:min-h-[480px]" : ""
             }`}
           >
             <img
               src={project.image}
               alt={project.title}
-              className="h-[230px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[280px]"
+              className="h-[210px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[250px] lg:h-[270px]"
             />
 
-            <div className="p-6">
+            <div className="p-5 md:p-6">
               <div className="mb-4 flex items-center justify-between gap-3">
-                <h3 className="text-2xl font-bold">{project.title}</h3>
+                <h3 className="text-xl font-bold md:text-2xl">{project.title}</h3>
                 <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300">
                   {project.category}
                 </span>
