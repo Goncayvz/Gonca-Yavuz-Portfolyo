@@ -27,22 +27,22 @@ function Certificates() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
-      className="mx-auto max-w-7xl px-6 py-16 text-white md:py-24"
+      className="mx-auto max-w-6xl px-5 py-12 text-white sm:px-6 md:py-16"
     >
-      <h2 className="mb-10 text-3xl font-bold sm:text-4xl md:mb-12 md:text-5xl">
+      <h2 className="mb-8 text-2xl font-bold sm:text-3xl md:mb-10 md:text-4xl">
         My <span className="text-purple-400">Certificates</span>
       </h2>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-5 md:grid-cols-2">
         {certificates.map((certificate) => (
           <div
             key={certificate.title}
-            className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-purple-400/40 md:p-6"
+            className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/40 md:p-5"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-purple-300 sm:text-sm">
               {certificate.issuer}
             </p>
-            <h3 className="mt-3 text-lg font-bold text-gray-100 md:text-xl">
+            <h3 className="mt-2 text-base font-bold text-gray-100 md:text-lg">
               {certificate.title}
             </h3>
           </div>

@@ -19,7 +19,6 @@ const projects = [
     tech: "React • Tailwind • Context API",
     description: "Dashboard yapısı, görev yönetimi ve kullanıcı odaklı arayüz çalışması.",
     category: "React",
-    featured: true,
   },
   {
     title: "InterviewFlow",
@@ -28,7 +27,6 @@ const projects = [
     tech: "React • JavaScript • Router",
     description: "Teknik mülakat pratiği için akış odaklı modern web arayüzü.",
     category: "React",
-    featured: true,
   },
   {
     title: "Zihin Atlası",
@@ -37,7 +35,6 @@ const projects = [
     tech: "React • PHP • MySQL",
     description: "Blog mantığı, veri yönetimi ve içerik odaklı sayfa deneyimi.",
     category: "Backend",
-    featured: true,
   },
   {
     title: "Personel İzin Sistemi",
@@ -46,7 +43,6 @@ const projects = [
     tech: "FastAPI • SQLite",
     description: "Personel izin süreçleri için backend ve veritabanı odaklı uygulama.",
     category: "Backend",
-    featured: true,
   },
   {
     title: "Kripto Takip",
@@ -96,14 +92,14 @@ function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.6 }}
-      className="mx-auto max-w-7xl px-6 py-16 text-white md:py-24"
+      className="mx-auto max-w-6xl px-5 py-12 text-white sm:px-6 md:py-16"
     >
-      <div className="mb-10 flex flex-col gap-5 md:mb-12 md:flex-row md:items-end md:justify-between">
+      <div className="mb-8 flex flex-col gap-4 md:mb-10 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-blue-300 sm:text-sm">
             Portfolio
           </p>
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
             Featured <span className="text-blue-400">Projects</span>
           </h2>
         </div>
@@ -114,7 +110,7 @@ function Projects() {
               key={filter}
               type="button"
               onClick={() => setActiveFilter(filter)}
-              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition ${
+              className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition sm:text-sm ${
                 activeFilter === filter
                   ? "bg-blue-500 text-white"
                   : "text-gray-300 hover:bg-white/10 hover:text-white"
@@ -126,33 +122,33 @@ function Projects() {
         </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {visibleProjects.map((project) => (
           <a
             key={project.title}
             href={project.github}
             target="_blank"
             rel="noreferrer"
-            className={`group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-blue-400/40 ${
-              project.featured ? "lg:min-h-[480px]" : ""
-            }`}
+            className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="h-[210px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[250px] lg:h-[270px]"
+              className="h-[150px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[160px] lg:h-[150px]"
             />
 
-            <div className="p-5 md:p-6">
-              <div className="mb-4 flex items-center justify-between gap-3">
-                <h3 className="text-xl font-bold md:text-2xl">{project.title}</h3>
+            <div className="p-4">
+              <div className="mb-2.5 flex items-center justify-between gap-3">
+                <h3 className="text-base font-bold md:text-lg">{project.title}</h3>
                 <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300">
                   {project.category}
                 </span>
               </div>
-              <p className="text-gray-300">{project.description}</p>
-              <p className="mt-4 text-sm text-gray-400">{project.tech}</p>
-              <p className="mt-5 inline-flex rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-300">
+              <p className="text-xs leading-5 text-gray-300 sm:text-sm">
+                {project.description}
+              </p>
+              <p className="mt-2.5 text-xs text-gray-400">{project.tech}</p>
+              <p className="mt-3 inline-flex rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1.5 text-xs font-semibold text-blue-300">
                 View on GitHub
               </p>
             </div>

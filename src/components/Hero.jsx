@@ -56,7 +56,7 @@ function Hero() {
       id="home"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative flex min-h-screen items-center overflow-hidden bg-[#050816] px-4 pb-12 pt-24 text-white sm:px-6 sm:pb-14 sm:pt-28"
+      className="relative flex min-h-[760px] items-center overflow-hidden bg-[#050816] px-4 pb-10 pt-20 text-white sm:px-6 sm:pb-12 sm:pt-24 lg:min-h-screen"
     >
       <div
         aria-hidden="true"
@@ -67,7 +67,7 @@ function Hero() {
         aria-hidden="true"
         animate={{ rotate: 360 }}
         transition={{ duration: 26, repeat: Infinity, ease: "linear" }}
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[860px] w-[860px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[conic-gradient(from_90deg,transparent_0deg,#22d3ee24_70deg,transparent_135deg,#10b98120_210deg,#fb71851c_280deg,transparent_360deg)] blur-3xl"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[680px] w-[680px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[conic-gradient(from_90deg,transparent_0deg,#22d3ee24_70deg,transparent_135deg,#10b98120_210deg,#fb71851c_280deg,transparent_360deg)] blur-3xl md:h-[760px] md:w-[760px]"
       ></motion.div>
       <motion.div
         aria-hidden="true"
@@ -104,73 +104,73 @@ function Hero() {
         className="absolute bottom-12 right-0 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl"
       ></motion.div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:gap-10">
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-7 lg:grid-cols-[0.98fr_1.02fr] lg:gap-8">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center lg:text-left"
         >
-          <div className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200">
+          <div className="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1.5 text-xs font-semibold text-blue-200 sm:text-sm">
             <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_16px_rgba(52,211,153,0.85)]"></span>
             Frontend Developer olarak yeni fırsatlara açık
           </div>
 
-          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:mx-0 lg:text-6xl xl:text-7xl">
+          <h1 className="mx-auto max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:mx-0 xl:text-6xl">
             Merhaba, ben Gonca.
             <span className="block bg-gradient-to-r from-blue-300 via-cyan-200 to-blue-400 bg-clip-text text-transparent">
               Modern ve responsive web arayüzleri geliştiriyorum.
             </span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-300 sm:text-lg sm:leading-8 lg:mx-0">
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-gray-300 sm:text-base sm:leading-7 lg:mx-0">
             React, JavaScript ve Tailwind CSS ile temiz, hızlı ve kullanıcı
             dostu arayüzler oluşturuyorum. API entegrasyonları ve responsive
             tasarım pratikleriyle gerçek projeler geliştirmeye odaklanıyorum.
           </p>
 
-          <div className="mt-7 flex flex-wrap justify-center gap-3 lg:justify-start">
+          <div className="mt-5 flex flex-wrap justify-center gap-2.5 lg:justify-start">
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-200"
+                className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-gray-200 sm:text-sm"
               >
                 {tech}
               </span>
             ))}
           </div>
 
-          <div className="mt-7 flex flex-col justify-center gap-3 sm:mt-8 sm:flex-row lg:justify-start">
+          <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <a
               href="#projects"
-              className="inline-flex justify-center rounded-full bg-blue-500 px-6 py-3 font-semibold text-white shadow-[0_16px_40px_rgba(37,99,235,0.28)] transition hover:-translate-y-0.5 hover:bg-blue-400 md:px-7"
+              className="inline-flex justify-center rounded-full bg-blue-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(37,99,235,0.28)] transition hover:-translate-y-0.5 hover:bg-blue-400 md:px-6"
             >
               Projelerimi Gör
             </a>
 
             <a
               href="#contact"
-              className="inline-flex justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-blue-400/50 hover:bg-white/10 md:px-7"
+              className="inline-flex justify-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-blue-400/50 hover:bg-white/10 md:px-6"
             >
               İletişime Geç
             </a>
           </div>
 
-          <div className="mx-auto mt-8 grid max-w-2xl gap-3 sm:grid-cols-3 lg:mx-0">
+          <div className="mx-auto mt-6 grid max-w-xl gap-3 sm:grid-cols-3 lg:mx-0">
             {heroHighlights.map(([title, description]) => (
               <div
                 key={title}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-left backdrop-blur-md"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-3 text-left backdrop-blur-md"
               >
                 <p className="text-sm font-semibold text-blue-300">{title}</p>
-                <p className="mt-1 text-sm leading-6 text-gray-300">
+                <p className="mt-1 text-xs leading-5 text-gray-300 sm:text-sm">
                   {description}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-7 flex justify-center gap-5 text-2xl lg:justify-start">
+          <div className="mt-6 flex justify-center gap-4 text-xl lg:justify-start">
             <a
               href="https://github.com/Goncayvz"
               target="_blank"
@@ -205,7 +205,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.1 }}
-          className="relative mx-auto w-full max-w-[500px] xl:max-w-[540px]"
+          className="relative mx-auto w-full max-w-[420px] xl:max-w-[470px]"
         >
           <motion.div
             aria-hidden="true"
